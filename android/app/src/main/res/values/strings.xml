@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">English Reading</string>
+    <string name="title_activity_main">English Reading</string>
+    <string name="package_name">com.tontonyuta.englishreading</string>
+    <string name="custom_url_scheme">com.tontonyuta.englishreading</string>
+</resources>

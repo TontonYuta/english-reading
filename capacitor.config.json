@@ -1,0 +1,6 @@
+{
+  "appId": "com.tontonyuta.englishreading",
+  "appName": "English Reading",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
