@@ -12,7 +12,7 @@ import { passages } from './data';
 import { Level, Passage, UserProgress } from './types';
 import { BookOpen, Trophy } from 'lucide-react';
 
-const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'IT'];
 
 const loadProgress = (): UserProgress => {
   const stored = localStorage.getItem('english_reader_progress');

@@ -54,5 +54,11 @@ export const ACHIEVEMENTS: Achievement[] = [
     title: 'C2 Master',
     description: 'Complete all C2 level passages.',
     iconName: 'Award'
+  },
+  {
+  id: 'it_pro',
+  title: 'IT Professional',
+  description: 'Complete all lessons in the IT level.',
+  iconName: 'Cpu' // Biểu tượng CPU cho dân công nghệ
   }
 ];

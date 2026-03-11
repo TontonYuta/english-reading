@@ -5,6 +5,7 @@ import { b1Passages } from './b1';
 import { b2Passages } from './b2';
 import { c1Passages } from './c1';
 import { c2Passages } from './c2';
+import { itPassages } from './it';
 
 export const passages: Passage[] = [
   ...a1Passages,
@@ -12,5 +13,6 @@ export const passages: Passage[] = [
   ...b1Passages,
   ...b2Passages,
   ...c1Passages,
-  ...c2Passages
+  ...c2Passages,
+  ...itPassages
 ];
