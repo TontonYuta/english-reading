@@ -82,3 +82,75 @@ Hệ thống thành tích được định nghĩa trong file `src/data/achieveme
    if (totalCompleted >= 10) newUnlocked.add('super_reader');
    ```
 5. *(Tùy chọn)* Nếu bạn sử dụng một Icon mới chưa từng dùng trước đây, hãy mở file `src/components/AchievementsView.tsx`, import Icon đó từ `lucide-react` và thêm nó vào biến `iconMap`.
+
+---
+
+## 5. Cách thêm Cấp độ hoặc Chủ đề mới (Ví dụ: Level "IT")
+
+Nếu bạn muốn thêm một cấp độ mới (như `D1`) hoặc một chủ đề chuyên biệt (như `IT`), hãy làm theo các bước sau:
+
+### Bước 1: Cập nhật Type
+Mở file `src/types.ts` và thêm giá trị mới vào type `Level`:
+```typescript
+// Trước: export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
+export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2' | 'IT'; // Thêm 'IT'
+```
+
+### Bước 2: Tạo file dữ liệu mới
+Tạo file `src/data/it.ts` (copy từ `a1.ts`) và định nghĩa các bài đọc cho chủ đề IT:
+```typescript
+import { Passage } from '../types';
+
+export const itPassages: Passage[] = [
+  {
+    id: 'it-1',
+    title: 'Introduction to Cloud Computing',
+    level: 'IT',
+    // ... nội dung bài đọc
+  }
+];
+```
+
+### Bước 3: Đăng ký dữ liệu mới
+Mở file `src/data/index.ts` để gộp dữ liệu mới vào hệ thống:
+```typescript
+import { itPassages } from './it'; // Import file vừa tạo
+
+export const passages: Passage[] = [
+  // ... các level cũ
+  ...itPassages // Thêm vào mảng tổng
+];
+```
+
+### Bước 4: Hiển thị lên giao diện
+1. **Cập nhật danh sách Level:** Mở `src/App.tsx` và thêm `'IT'` vào mảng `LEVELS`:
+   ```typescript
+   const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'IT'];
+   ```
+2. **Thêm mô tả hiển thị:** Mở `src/components/LevelGrid.tsx` và thêm mô tả cho level mới trong `levelDescriptions`:
+   ```typescript
+   const levelDescriptions: Record<Level, string> = {
+     // ... các level cũ
+     IT: 'Information Technology' // Tên hiển thị bên dưới icon
+   };
+   ```
+
+### Bước 5: Thêm Thành tích cho Level mới (Tùy chọn)
+Nếu bạn muốn có huy hiệu "IT Master" khi hoàn thành toàn bộ bài đọc IT:
+1. Thêm thành tích vào `src/data/achievements.ts`:
+   ```typescript
+   {
+     id: 'it_master',
+     title: 'IT Master',
+     description: 'Complete all IT level passages.',
+     iconName: 'Award'
+   }
+   ```
+2. Logic tự động mở khóa đã có sẵn trong `App.tsx` (nó tự động quét qua mảng `LEVELS`), nên bạn không cần viết thêm code logic nếu đã làm đúng Bước 4.1.
+
+---
+
+## 6. Lưu ý về Icon
+Ứng dụng sử dụng thư viện **Lucide React**. Bạn có thể tìm các tên icon khác tại [lucide.dev](https://lucide.dev/icons) để thay đổi cho sinh động.
+- Để đổi icon trong `LevelGrid`, hãy chỉnh sửa component đó.
+- Để đổi icon cho Thành tích, hãy đổi `iconName` trong `src/data/achievements.ts`.
