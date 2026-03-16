@@ -1,6 +1,6 @@
 {
-  "appId": "com.englishreader.app",
-  "appName": "English Reader",
+  "appId": "com.tontonyuta.englishreading",
+  "appName": "English Reading",
   "webDir": "dist",
   "bundledWebRuntime": false,
   "plugins": {

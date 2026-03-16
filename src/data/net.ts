@@ -1061,7 +1061,6 @@ export const netPassages: Passage[] = [
     }
   ]
 },
-,
 {
   id: 'net-21',
   title: 'MAC Address Basics',
