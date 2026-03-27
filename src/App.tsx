@@ -14,7 +14,7 @@ import { BookOpen, Trophy, RefreshCw, User } from 'lucide-react';
 import { APP_VERSION, GOOGLE_SCRIPT_URL } from './config';
 import { CapacitorUpdater } from '@capgo/capacitor-updater';
 
-const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'NET'];
+const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'NET', 'TOEIC', 'IELTS'];
 
 const loadProgress = (): UserProgress => {
   const stored = localStorage.getItem('english_reader_progress');

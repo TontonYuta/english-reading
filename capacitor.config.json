@@ -1,12 +1,11 @@
 {
-  "appId": "com.tontonyuta.englishreading",
-  "appName": "English Reading",
+  "appId": "com.englishreader.app",
+  "appName": "English Reader",
   "webDir": "dist",
   "bundledWebRuntime": false,
   "plugins": {
     "CapacitorUpdater": {
-      "autoUpdate": false,
-      "appReadyTimeout": 30000
+      "autoUpdate": false
     }
   }
 }

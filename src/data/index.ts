@@ -6,6 +6,8 @@ import { b2Passages } from './b2';
 import { c1Passages } from './c1';
 import { c2Passages } from './c2';
 import { netPassages } from './net';
+import { toeicPassages } from './toeic';
+import { ieltsPassages } from './ielts';
 
 export const passages: Passage[] = [
   ...a1Passages,
@@ -14,5 +16,7 @@ export const passages: Passage[] = [
   ...b2Passages,
   ...c1Passages,
   ...c2Passages,
-  ...netPassages
+  ...netPassages,
+  ...toeicPassages,
+  ...ieltsPassages
 ];

@@ -16,7 +16,9 @@ const levelDescriptions: Record<Level, string> = {
   B2: 'Upper Intermediate',
   C1: 'Advanced',
   C2: 'Proficient',
-  NET: 'Computer Networking'
+  NET: 'Computer Networking',
+  TOEIC: 'Workplace English',
+  IELTS: 'Academic & Test Prep'
 };
 
 export function LevelGrid({ levels, passages, progress, onSelectLevel }: LevelGridProps) {
